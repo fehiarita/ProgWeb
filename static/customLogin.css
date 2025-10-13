@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(238, 238, 238);
+    font-family: 'Inter';
+}
+
+.containerLogin{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    padding-left: 30px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.title{
+    color: rgb(102, 102, 102);
+}
+
+
+
+.E-mail input{
+    width: 70%;
+    padding: 5px;
+}
+
+.Senha input{
+    width: 70%;
+    padding: 5px;
+}
+
+.botaologin {
+    display: inline-flex;              
+    justify-content: center;          
+    align-items: center;               
+    background-color: rgb(120, 70, 185);
+    width: 100px;
+    height: 45px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;            
+    font-weight: bold;
+    margin-top: 20px; 
+}
+

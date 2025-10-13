@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Primeira Página</title>
+  </head>
+  <body>
+    <h2>Usuários</h2>
+
+    <p><a>+ Novo usuário</a></p>
+
+    {% if users %}
+    <table border="1" cellpadding="6">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Papel</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for u in users %}
+        <tr>
+          <td>{{ u.id }}</td>
+          <td>
+            <a>{{ u.nome }}</a>
+          </td>
+          <td>{{ u.email }}</td>
+          <td>{{ u.role }}</td>
+          <td>
+            <a href="/profile/edit/{{ u.id }}">Editar</a>
+            |
+            <form method="post" style="display: inline">
+              <button type="submit">Excluir</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p>Nenhum usuário cadastrado.</p>
+    {% endif %}
+  </body>
+</html>
